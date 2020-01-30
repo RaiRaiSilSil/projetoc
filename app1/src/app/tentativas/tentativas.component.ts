@@ -14,7 +14,6 @@ export class TentativasComponent implements OnInit {
   ]
 
   constructor() { 
-    console.log(this.coracoes)
   }
 
   ngOnChanges() {
@@ -22,8 +21,6 @@ export class TentativasComponent implements OnInit {
       let indice=this.coracoes.length-this.tentativas
       this.coracoes[indice -1].cheio=false
     }
-    console.log('Tentativas recebidas de painel', this.tentativas)
-
   }
 
   ngOnInit() {

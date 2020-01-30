@@ -26,7 +26,6 @@ export class PainelComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
-    console.log('O componente painel foi destruído')
   }
   
 
@@ -41,13 +40,13 @@ export class PainelComponent implements OnInit, OnDestroy {
       this.rodada++
       this.progressop=this.progressop+ (100/this.frases.length)
       if(this.rodada===4){
-        this.encerrarJogo.emit('Vitoria')
+        this.encerrarJogo.emit('vitoria')
       }
       this.atualizaRodada()
     }else{
       this.tentativas--
       if(this.tentativas===-1){
-        this.encerrarJogo.emit('Derrota')
+        this.encerrarJogo.emit('derrota')
       }
     }
   }
@@ -57,4 +56,5 @@ export class PainelComponent implements OnInit, OnDestroy {
     this.resposta=''
 
   }
+
 }
